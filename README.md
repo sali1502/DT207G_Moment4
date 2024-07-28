@@ -31,12 +31,12 @@ Nedan finns beskrivet hur man kan nå APIet på olika vis:
 <tr>
   <td>POST</td>
   <td>/index</td>
-  <td>Lagrar användare (användarnamn, löseord och tid för skapande av användare).</td>
+  <td>Registrerar och lagrar användare (användarnamn, löseord och tid för skapande av användare).</td>
 </tr>
 <tr>
   <td>POST</td>
   <td>/login</td>
-  <td>Jämför användare lagrad i databas med angiven användare, jämför hashade lösenord och skickar token.</td>
+  <td>Jämför användare i databas med användare från loginformulär, jämför hashade lösenord och skickar med token.</td>
   </tr>
 <tr>
   <td>GET</td>
