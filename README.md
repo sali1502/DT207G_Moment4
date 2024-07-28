@@ -31,7 +31,7 @@ Nedan finns beskrivet hur man kan nå APIet på olika vis:
 <tr>
   <td>POST</td>
   <td>/index</td>
-  <td>Lagrar användare (användarnamn, löseord och tid för skapande av användare).)</td>
+  <td>Lagrar användare (användarnamn, löseord och tid för skapande av användare).</td>
 </tr>
 <tr>
   <td>POST</td>
