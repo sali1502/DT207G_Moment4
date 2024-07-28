@@ -1,3 +1,5 @@
+/* Moment 4, DT207G Backend-baserad webbutveckling, Åsa Lindskog sali1502@student.miun.se */
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
