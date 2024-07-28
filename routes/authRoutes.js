@@ -35,7 +35,7 @@ router.post("/index", async (req, res) => {
 
         res.status(201).json({ message: "Användare skapad" });
     } catch (error) {
-        res.status(500).json({ error: "Server error!" });
+        res.status(500).json({ error: "Användaren finns redan, försök igen!" });
     }
 });
 
@@ -60,15 +60,15 @@ router.post("/login", async (req, res) => {
         if (!isPasswordMatch) {
             return res.status(401).json({ error: "Felaktigt användarnamn och/eller lösenord" });
         } else {
-
             // Skapa JWT
             const payload = { username: username };
             const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: '8h' });
-            const response = {
+            res.status(200).json({
                 message: "Användare inloggad",
-                token: token
-            }
-            res.status(200).json({ response });
+                response: {
+                    token: token
+                }
+            });
         }
     } catch (error) {
         res.status(500).json({ error: "Server error" });
