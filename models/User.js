@@ -62,6 +62,7 @@ userSchema.statics.login = async function (username, password) {
             throw new Error("Felaktigt användarnamn och/eller lösenord");
         }
         const isPasswordMatch = await user.comparePassword(password);
+        
         // Ej korrekt?
         if (!isPasswordMatch) {
             throw new Error("Felaktigt användarnamn och/eller lösenord");
